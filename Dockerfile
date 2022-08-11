@@ -1,6 +1,6 @@
 FROM node:16-alpine
 
-ARG VERSION=3.x
+ARG VERSION=3.21.0
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/serverless/github-action"
