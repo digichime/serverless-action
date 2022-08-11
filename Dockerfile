@@ -1,4 +1,6 @@
-FROM nikolaik/python-nodejs:python3.10-nodejs16-slim
+FROM node:16-alpine
+
+ARG VERSION=3.x
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/serverless/github-action"
@@ -10,5 +12,6 @@ LABEL "com.github.actions.description"="Wraps the Serverless Framework to enable
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
-RUN npm i -g serverless@3.x
+RUN npm install --location=global serverless@${VERSION}
+
 ENTRYPOINT ["serverless"]
