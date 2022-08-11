@@ -1,0 +1,9 @@
+name: 'Serverless GitHub Action'
+description: 'Wraps the Serverless Framework to enable common Serverless commands.'
+author: 'Serverless, Inc. <hello@serverless.com> (https://serverless.com)'
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/wasd-inc/serverless-action:v3.21.0'
+branding:
+  icon: 'zap'
+  color: 'red'
